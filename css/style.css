@@ -1,0 +1,313 @@
+/* =========================
+   1. GLOBAL VARIABLES (Updated from Logo)
+========================== */
+:root {
+    /* Brand Colors pulled directly from the new logo */
+    --primary-color: #a32020; /* The deep crimson red */
+    --secondary-color: #dca73a; /* The golden yellow */
+    
+    /* Neutral Colors - Darker theme */
+    --text-dark: #1a1a1a; /* Darker text */
+    --text-light: #ffffff;
+    --bg-light: #2b2b2b; /* Dark gray for alternating sections */
+    --bg-dark: #1f1f1f; /* Darker background */
+    --bg-white: #2b2b2b; /* Card backgrounds */
+    
+    /* Typography - Using native system fonts for maximum speed */
+    --font-main: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Layout Variables */
+    --max-width: 1200px;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+/* =========================
+   2. CSS RESET & BASE STYLES
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-light);
+    line-height: 1.6;
+    background-color: var(--bg-dark);
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   3. UTILITY CLASSES
+========================== */
+/* Keeps content centered and prevents it from stretching too far on large monitors */
+.section-wrapper, .hero-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Reusable alternating background class */
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* =========================
+   4. HEADER & NAVIGATION (FLEXBOX)
+========================== */
+.site-header {
+    display: flex;
+    justify-content: space-between; /* Pushes logo left, nav right */
+    align-items: center; /* Centers items vertically */
+    padding: 1rem 5%; /* Fluid padding acting as a wrapper */
+    background-color: var(--bg-dark);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle drop shadow */
+    position: sticky; /* Keeps the menu at the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Flexbox for the list items */
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Evenly spaces the links */
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+/* Hover effects and active state */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Hide the hamburger button on desktop screens */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* =========================
+   5. BUTTON STYLES
+========================== */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* =========================
+   6. BUTTONS & LINKS
+========================== */
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color); /* The warm rust/orange */
+    color: var(--text-dark);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+}
+
+/* =========================
+   7. HERO SECTION (Updated with Image)
+========================== */
+.hero {
+    /* The linear-gradient creates a dark overlay, the url() loads the image */
+    background: linear-gradient(rgba(43, 43, 43, 0.75), rgba(43, 43, 43, 0.75)), 
+                url('../resources/old millport.avif') center/cover no-repeat;
+    color: var(--text-light);
+    text-align: center;
+    padding: 8rem 1rem; /* Increased padding to show off more of the photo */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; /* Centers the paragraph under the heading */
+    opacity: 0.9; /* Softens the text slightly */
+}
+
+/* =========================
+   8. CHAMBER BUZZ & CARDS
+========================== */
+.chamber-buzz {
+    padding: 4rem 0; /* Vertical spacing */
+    background-color: var(--bg-light); /* Subtle gray background */
+}
+
+.chamber-buzz h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+/* CSS Grid Magic */
+.news-grid {
+    display: grid;
+    /* This creates columns that are at least 300px wide, and expands them to fill the space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Spacing between cards */
+}
+
+.news-card {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px; /* Soft, rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Very subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make the card "lift" when the user hovers over it */
+.news-card:hover {
+    transform: translateY(-5px); /* Moves the card up slightly */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Darkens the shadow */
+}
+
+.news-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.news-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.read-more {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   9. MOBILE RESPONSIVENESS
+========================== */
+/* Triggers when the screen is tablet-sized or smaller */
+@media (max-width: 768px) {
+    /* Reveal the hamburger menu button */
+    .mobile-toggle {
+        display: block;
+    }
+
+    /* Change the nav-links from a row to a stacked column */
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--bg-white);
+        position: absolute;
+        top: 100%; /* Drops it directly below the header */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        gap: 1rem; /* Adjusts spacing between stacked links */
+    }
+
+    /* Center the links in the dropdown */
+    .nav-links li {
+        text-align: center;
+    }
+
+    /* This class will be toggled on and off by JavaScript */
+    .nav-links.active {
+        display: flex;
+    }
+}

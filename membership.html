@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership & Grants - South Lamar Chamber of Commerce</title>
+    <meta name="description" content="Join the South Lamar Chamber, apply for a business grant, or register as a vendor.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">South Lamar Chamber</a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="membership.html" class="active">Membership</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Open Menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <main class="membership-page">
+        
+        <section class="page-header">
+            <div class="section-wrapper">
+                <h1>Grow With Us</h1>
+                <p>Find out how the South Lamar Chamber of Commerce can support your business and our community.</p>
+                
+                <div class="jump-links">
+                    <a href="#join" class="btn-outline">Join the Chamber</a>
+                    <a href="#grant" class="btn-outline">Business Grant</a>
+                    <a href="#vendor" class="btn-outline">Vendor Registration</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="membership-section bg-light">
+            <div class="section-wrapper">
+                <h2>Become a Member</h2>
+                <p>Join a network of local businesses dedicated to making South Lamar County thrive.</p>
+                
+                <form action="#" method="POST" class="standard-form">
+                    <div class="form-group">
+                        <label for="bizName">Business Name *</label>
+                        <input type="text" id="bizName" name="bizName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactName">Contact Name *</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="grant" class="membership-section">
+            <div class="section-wrapper">
+                <h2>Business Members Grant</h2>
+                <p>The Chamber occasionally offers grants to help local businesses grow, just like our recent award to the Little Town Diner in Kennedy. Check below for current availability and requirements.</p>
+                
+                <div class="info-card">
+                    <h3>2026 Grant Cycle</h3>
+                    <p><strong>Status:</strong> Applications open Spring 2026.</p>
+                    <p>Details and application requirements will be posted here soon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vendor" class="membership-section bg-light">
+            <div class="section-wrapper">
+                <h2>Event Vendor Registration</h2>
+                <p>Want to set up a booth at our next community event? Fill out the vendor interest form below.</p>
+                
+                <form action="#" method="POST" class="standard-form">
+                    <div class="form-group">
+                        <label for="vendorName">Vendor/Business Name *</label>
+                        <input type="text" id="vendorName" name="vendorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">Event of Interest</label>
+                        <select id="eventType" name="eventType">
+                            <option value="fall-fest">Fall Festival</option>
+                            <option value="christmas">Christmas Parade</option>
+                            <option value="other">Other / General Inquiry</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Request Vendor Info</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 South Lamar Chamber of Commerce. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

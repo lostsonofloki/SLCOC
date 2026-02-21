@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Directory - South Lamar Chamber of Commerce</title>
+    <meta name="description" content="Find local businesses and services in South Lamar County.">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">South Lamar Chamber</a>
+        </div>
+        
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li> 
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Open Menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <main class="directory-page">
+        
+        <section class="directory-header">
+            <div class="section-wrapper">
+                <h1>Chamber Members Directory</h1>
+                <p>Support local! Browse our member businesses below.</p>
+                
+                <div class="controls-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search by business name...">
+                    
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                        <option value="dining">Dining & Food</option>
+                        <option value="retail">Retail</option>
+                        <option value="services">Professional Services</option>
+                        <option value="automotive">Automotive</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="directory-content">
+            <div class="section-wrapper">
+                <div class="directory-grid" id="directoryGrid">
+                    
+                    <article class="member-card" data-category="dining">
+                        <h3>Little Town Diner</h3>
+                        <p class="member-category">Dining & Food</p>
+                        <div class="member-details">
+                            <p><strong>Address:</strong> 123 Main St, Kennedy, AL</p>
+                            <p><strong>Phone:</strong> (555) 555-0101</p>
+                        </div>
+                        <a href="#" class="btn-outline">Visit Website</a>
+                    </article>
+
+                    <article class="member-card" data-category="services">
+                        <h3>Marcelyn M. Angwin, Attorney At Law</h3>
+                        <p class="member-category">Professional Services</p>
+                        <div class="member-details">
+                            <p><strong>Address:</strong> 456 Broad St, Kennedy, AL</p>
+                            <p><strong>Phone:</strong> (555) 555-0102</p>
+                        </div>
+                        <a href="#" class="btn-outline">Contact</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 South Lamar Chamber of Commerce. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/directory.js"></script>
+</body>
+</html>
