@@ -35,20 +35,19 @@ CoC/
 - [x] directory.html with member cards
 - [x] membership.html with forms (join, grant, vendor)
 - [x] contact.html with contact form and info
+- [x] CSS styling with dark theme
+- [x] JavaScript functionality (main.js, directory.js)
 - [x] README.md documentation
 
 ### In Progress
-- [ ] CSS styling (css/style.css)
-- [ ] JavaScript functionality (js/main.js, js/directory.js)
+- [ ] Add more member businesses to directory
+- [ ] Complete index.html home page content
 
 ### Planned
-- [ ] Create index.html home page
-- [ ] Implement search functionality
 - [ ] Implement category filtering
-- [ ] Mobile navigation toggle
-- [ ] Add more member businesses
+- [ ] Mobile navigation toggle testing
 - [ ] Optimize for SEO
-- [ ] Add contact form
+- [ ] Add contact form backend
 
 ## Getting Started
 
