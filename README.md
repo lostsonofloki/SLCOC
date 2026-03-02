@@ -34,7 +34,7 @@ CoC/
 ├── index.html             # Home page with Chamber Buzz news
 ├── about.html             # About page with mission and officers
 ├── blog-post-1.html       # Full blog article page
-├── directory.html         # Business directory
+├── directory.html         # Business directory with member cards
 ├── membership.html        # Membership, grants, and vendor info
 ├── contact.html           # Contact information and form
 └── README.md              # This file
@@ -48,20 +48,23 @@ CoC/
 - [x] Home page with Chamber Buzz news section
 - [x] About page with mission, community impact, and leadership team
 - [x] Blog post template with image gallery (SLCOC Business Grant Awarded)
-- [x] Business directory with member cards
+- [x] Business directory with 13 member businesses
+- [x] Directory search and category filtering
 - [x] Membership page with join, grant, and vendor sections
 - [x] Contact page with contact info and social links
 - [x] CSS styling with dark theme and responsive design
 - [x] JavaScript functionality (mobile navigation, directory search)
 - [x] Officer photos and blog images added
 - [x] Facebook integration (https://www.facebook.com/SLChamberofcommerce/)
+- [x] Footer updated with real contact info (PO Box, phone, email)
+- [x] Uniform button styling on directory cards
+- [x] Card hover effects and improved contrast
 
 ### In Progress
 - [ ] Add more member businesses to directory
 - [ ] Create additional blog posts
 
 ### Planned
-- [ ] Complete category filtering implementation
 - [ ] Optimize for SEO
 - [ ] Add contact form backend
 - [ ] Add more community event photos
@@ -76,6 +79,24 @@ CoC/
 | Membership | Join Chamber, business grants, vendor registration |
 | Contact | Contact info, social media links |
 | Blog Post | Full article view with images |
+
+## Directory Members
+
+| Business | Category |
+|----------|----------|
+| Little Town Diner | Dining & Food |
+| Marcelyn Mary Angwin | Professional Services |
+| Alabama Credit Union | Professional Services |
+| Colby Shaw, Realtor | Real Estate |
+| Dowdle Funeral Home | Funeral & Cremation Services |
+| David Angwin Therapy, INC | Behavioral Health Therapy |
+| Lamar County Government | Government & Community Services |
+| Millport Public Library | Community & Education |
+| Rafton's Clothier | Retail |
+| R. Scott Cole, CPA | Financial & Accounting Services |
+| Town of Kennedy | Government |
+| Town of Millport | Government |
+| West Alabama Bank | Financial Services |
 
 ## Technologies Used
 
