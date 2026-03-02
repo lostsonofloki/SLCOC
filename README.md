@@ -1,29 +1,42 @@
-# South Lamar Chamber of Commerce - Business Directory
+# South Lamar Chamber of Commerce - Official Website
 
 ## Project Overview
 
-A web application for the South Lamar Chamber of Commerce to showcase member businesses and provide a searchable directory for the community.
+The official website for the South Lamar Chamber of Commerce, serving Millport and Kennedy, AL. The site showcases member businesses, provides community information, and promotes local events and initiatives.
 
 ### Key Features
-- Business directory with search functionality
-- Category filtering (Dining & Food, Retail, Professional Services, Automotive)
+- Business directory with search and category filtering
+- About page with mission statement and leadership team
+- Blog/news section with full article pages
+- Membership and grant information
 - Responsive design for desktop and mobile devices
-- Member business cards with contact information
+- Dark theme with brand colors (crimson red and golden yellow)
 
 ## Project Structure
 
 ```
 CoC/
 ├── css/
-│   └── style.css          # Main stylesheet
+│   └── style.css          # Main stylesheet with all page styles
 ├── js/
-│   ├── main.js            # Core JavaScript functionality
-│   └── directory.js       # Directory-specific scripts (search, filter)
-├── resources/             # Images, fonts, and other assets
-├── index.html             # Home page
-├── directory.html         # Business directory page
-├── membership.html        # Membership information (planned)
-├── contact.html           # Contact page (planned)
+│   ├── main.js            # Core JavaScript (mobile navigation)
+│   └── directory.js       # Directory search and filter functionality
+├── resources/             # Images and assets
+│   ├── E2.png            # Chamber logo
+│   ├── Christina.avif    # Officer photos
+│   ├── Justin.avif
+│   ├── Jayna.avif
+│   ├── Rita.avif
+│   ├── granttaward.avif  # Blog images
+│   ├── pizza.avif
+│   ├── pizza oven.avif
+│   └── prep.avif
+├── index.html             # Home page with Chamber Buzz news
+├── about.html             # About page with mission and officers
+├── blog-post-1.html       # Full blog article page
+├── directory.html         # Business directory
+├── membership.html        # Membership, grants, and vendor info
+├── contact.html           # Contact information and form
 └── README.md              # This file
 ```
 
@@ -32,40 +45,56 @@ CoC/
 ### Completed
 - [x] Project structure setup
 - [x] All HTML page templates created
-- [x] directory.html with member cards
-- [x] membership.html with forms (join, grant, vendor)
-- [x] contact.html with contact form and info
-- [x] CSS styling with dark theme
-- [x] JavaScript functionality (main.js, directory.js)
-- [x] README.md documentation
+- [x] Home page with Chamber Buzz news section
+- [x] About page with mission, community impact, and leadership team
+- [x] Blog post template with image gallery (SLCOC Business Grant Awarded)
+- [x] Business directory with member cards
+- [x] Membership page with join, grant, and vendor sections
+- [x] Contact page with contact info and social links
+- [x] CSS styling with dark theme and responsive design
+- [x] JavaScript functionality (mobile navigation, directory search)
+- [x] Officer photos and blog images added
+- [x] Facebook integration (https://www.facebook.com/SLChamberofcommerce/)
 
 ### In Progress
 - [ ] Add more member businesses to directory
-- [ ] Complete index.html home page content
+- [ ] Create additional blog posts
 
 ### Planned
-- [ ] Implement category filtering
-- [ ] Mobile navigation toggle testing
+- [ ] Complete category filtering implementation
 - [ ] Optimize for SEO
 - [ ] Add contact form backend
+- [ ] Add more community event photos
 
-## Getting Started
+## Pages
 
-1. Open `index.html` in a web browser to view the site
-2. Navigate to `directory.html` to browse the business directory
+| Page | Description |
+|------|-------------|
+| Home | Welcome message, hero section, Chamber Buzz news |
+| About | Mission, community impact, officer bios with photos |
+| Directory | Searchable business directory with categories |
+| Membership | Join Chamber, business grants, vendor registration |
+| Contact | Contact info, social media links |
+| Blog Post | Full article view with images |
 
 ## Technologies Used
 
 - HTML5
-- CSS3
-- JavaScript (Vanilla)
+- CSS3 (CSS Grid, Flexbox, CSS Variables)
+- JavaScript (Vanilla ES6+)
 
 ## Development Notes
 
 - Mobile-first responsive design approach
 - Semantic HTML structure
 - Accessibility considerations (ARIA labels, semantic elements)
+- Dark theme using CSS custom properties
+- System fonts for performance
+
+## Social Media
+
+- **Facebook:** [SLChamberofcommerce](https://www.facebook.com/SLChamberofcommerce/)
 
 ---
 
-**Last Updated:** February 21, 2026
+**Last Updated:** March 1, 2026
