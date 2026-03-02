@@ -384,3 +384,154 @@ ul {
         height: 250px;
     }
 }
+
+/* =========================
+   11. ABOUT PAGE
+========================== */
+.about-page {
+    background-color: var(--bg-dark);
+}
+
+.page-header {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.hero-small {
+    padding: 3rem 0;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.mission-statement {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.about-story {
+    padding: 4rem 0;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.story-text h2,
+.impact-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.story-text h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.story-text p,
+.impact-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.event-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.event-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* Leadership Team */
+.leadership-team {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center:last-of-type {
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.officer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.officer-card {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.officer-card:hover {
+    transform: translateY(-5px);
+}
+
+.officer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--secondary-color);
+}
+
+.officer-card h3 {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.officer-title {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .officer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .officer-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .officer-grid {
+        grid-template-columns: 1fr;
+    }
+}
