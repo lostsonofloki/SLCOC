@@ -8,7 +8,8 @@ The official website for the South Lamar Chamber of Commerce, serving Millport a
 - Business directory with search and category filtering
 - About page with mission statement and leadership team
 - Blog/news section with full article pages
-- Membership and grant information
+- Separate pages for member applications, vendor registration, and grants
+- Responsive navigation (horizontal on desktop, hamburger menu on mobile)
 - Responsive design for desktop and mobile devices
 - Dark theme with brand colors (crimson red and golden yellow)
 
@@ -35,7 +36,9 @@ CoC/
 ├── about.html             # About page with mission and officers
 ├── blog-post-1.html       # Full blog article page
 ├── directory.html         # Business directory with member cards
-├── membership.html        # Membership, grants, and vendor info
+├── member-form.html       # Membership application form
+├── vendor-form.html       # Event vendor registration form
+├── grant.html             # Business grant information
 ├── contact.html           # Contact information and form
 └── README.md              # This file
 ```
@@ -50,7 +53,9 @@ CoC/
 - [x] Blog post template with image gallery (SLCOC Business Grant Awarded)
 - [x] Business directory with 13 member businesses
 - [x] Directory search and category filtering
-- [x] Membership page with join, grant, and vendor sections
+- [x] Member application form (member-form.html)
+- [x] Vendor registration form (vendor-form.html)
+- [x] Business grant information page (grant.html)
 - [x] Contact page with contact info and social links
 - [x] CSS styling with dark theme and responsive design
 - [x] JavaScript functionality (mobile navigation, directory search)
@@ -59,6 +64,7 @@ CoC/
 - [x] Footer updated with real contact info (PO Box, phone, email)
 - [x] Uniform button styling on directory cards
 - [x] Card hover effects and improved contrast
+- [x] Responsive navigation (horizontal desktop menu, hamburger mobile menu)
 
 ### In Progress
 - [ ] Add more member businesses to directory
@@ -76,7 +82,9 @@ CoC/
 | Home | Welcome message, hero section, Chamber Buzz news |
 | About | Mission, community impact, officer bios with photos |
 | Directory | Searchable business directory with categories |
-| Membership | Join Chamber, business grants, vendor registration |
+| Member Form | Membership application form |
+| Vendor Form | Event vendor registration form |
+| Grants | Business grant information and availability |
 | Contact | Contact info, social media links |
 | Blog Post | Full article view with images |
 
@@ -118,4 +126,4 @@ CoC/
 
 ---
 
-**Last Updated:** March 1, 2026
+**Last Updated:** March 5, 2026
