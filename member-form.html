@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Application - South Lamar Chamber of Commerce</title>
+    <meta name="description" content="Apply for membership with the South Lamar Chamber of Commerce.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="resources/E2.png" alt="South Lamar Chamber of Commerce Logo" class="nav-logo">
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="member-form.html" class="active">Member Form</a></li>
+                <li><a href="vendor-form.html">Vendor Form</a></li>
+                <li><a href="grant.html">Grants</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" aria-label="Open Menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <main class="form-page">
+
+        <section class="page-header">
+            <div class="section-wrapper">
+                <h1>Become a Member</h1>
+                <p>Join a network of local businesses dedicated to making South Lamar County thrive.</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="section-wrapper">
+                <form action="#" method="POST" class="standard-form">
+                    <div class="form-group">
+                        <label for="bizName">Business Name *</label>
+                        <input type="text" id="bizName" name="bizName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactName">Contact Name *</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Business Address</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Application</button>
+                </form>
+
+                <div class="form-nav">
+                    <a href="membership.html" class="btn-outline">Back to Membership</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <h4>South Lamar Chamber of Commerce</h4>
+                <p>P.O. Box 205, Millport, AL 35576</p>
+                <p>Phone: <a href="tel:6623611060">(662) 361-1060</a></p>
+                <p>Email: <a href="mailto:southlamarchamber@gmail.com">southlamarchamber@gmail.com</a></p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/SLChamberofcommerce/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 South Lamar Chamber of Commerce. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
