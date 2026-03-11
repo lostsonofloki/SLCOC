@@ -39,15 +39,105 @@
             </div>
         </section>
 
+        <section class="membership-invite">
+            <div class="invite-content">
+                <h2>Become a member of the South Lamar Chamber</h2>
+                
+                <p>Please join us in becoming an active member of the South Lamar Chamber of Commerce. Member participation is key to keeping events we host alive and draw people into our community and local businesses.</p>
+                
+                <div class="events-highlight">
+                    <p>We host two festivals a year (April and November), Farmer's Market, and also give back to the community through scholarships and local support.</p>
+                </div>
+
+                <p>Our hopes is to bring more benefits to our local business community with events like <strong>Monthly Networking Events</strong> and <strong>Back to Business</strong> workshops.</p>
+                
+                <p>We are proud to serve our community and hope that you join us in making our business environment a better place!</p>
+                
+                <div class="signatures">
+                    <div class="sig-block">
+                        <p><strong>Christina Higginbotham</strong><br>
+                        <span>President</span></p>
+                    </div>
+                    <div class="sig-block">
+                        <p><strong>Justin Shaw</strong><br>
+                        <span>Vice President</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="membership-tiers">
+            <div class="section-wrapper">
+                <h2>Membership Levels</h2>
+                <div class="tiers-grid">
+                    <div class="tier-card">
+                        <h3>Business</h3>
+                        <p class="tier-price">$80/year</p>
+                        <p class="tier-valid">Valid for 12 months</p>
+                        <ul class="tier-benefits">
+                            <li>Free Festival Booths</li>
+                            <li>Ribbon Cutting Ceremonies</li>
+                            <li>Advertising Opportunities</li>
+                            <li>Networking</li>
+                            <li>Investing in our Community</li>
+                            <li>Increase Visibility</li>
+                            <li>Leadership Opportunities</li>
+                            <li>Advise the Chamber of Your Business Needs</li>
+                            <li>Volunteer Opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="tier-card">
+                        <h3>Family</h3>
+                        <p class="tier-price">$60/year</p>
+                        <p class="tier-valid">Valid for 12 months</p>
+                        <ul class="tier-benefits">
+                            <li>Ribbon Cutting Ceremonies</li>
+                            <li>Invest in Our Community</li>
+                            <li>Increase Visibility in the Community</li>
+                            <li>Volunteer Opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="tier-card">
+                        <h3>Individual</h3>
+                        <p class="tier-price">$40/year</p>
+                        <p class="tier-valid">Valid for 12 months</p>
+                        <ul class="tier-benefits">
+                            <li>Ribbon Cutting Ceremonies</li>
+                            <li>Networking</li>
+                            <li>Increase Visibility in the Community</li>
+                            <li>Invest in the Community</li>
+                            <li>Volunteer Opportunities</li>
+                        </ul>
+                    </div>
+
+                    <div class="tier-card">
+                        <h3>Church/Non-Profit</h3>
+                        <p class="tier-price">$30/year</p>
+                        <p class="tier-valid">Valid for 12 months</p>
+                        <ul class="tier-benefits">
+                            <li>Networking</li>
+                            <li>Free Festival Booth</li>
+                            <li>Volunteering Opportunities</li>
+                            <li>Visibility in the Community</li>
+                            <li>Advise the Chamber of your Needs</li>
+                            <li>Investing in the Community</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="form-section">
             <div class="section-wrapper">
                 <form action="#" method="POST" class="standard-form">
                     <div class="form-group">
-                        <label for="bizName">Business Name *</label>
+                        <label for="bizName">Business/Name *</label>
                         <input type="text" id="bizName" name="bizName" required>
                     </div>
                     <div class="form-group">
-                        <label for="contactName">Contact Name *</label>
+                        <label for="contactName">Primary Contact *</label>
                         <input type="text" id="contactName" name="contactName" required>
                     </div>
                     <div class="form-group">
@@ -55,8 +145,22 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Business Category *</label>
+                        <input type="text" id="category" name="category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="membershipLevel">Membership Level *</label>
+                        <select id="membershipLevel" name="membershipLevel" required>
+                            <option value="">Select a membership level</option>
+                            <option value="business">Business - $80/year</option>
+                            <option value="family">Family - $60/year</option>
+                            <option value="individual">Individual - $40/year</option>
+                            <option value="church">Church/Non-Profit - $30/year</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="address">Business Address</label>

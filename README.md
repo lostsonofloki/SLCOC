@@ -53,7 +53,7 @@ CoC/
 - [x] Blog post template with image gallery (SLCOC Business Grant Awarded)
 - [x] Business directory with 13 member businesses
 - [x] Directory search and category filtering
-- [x] Member application form (member-form.html)
+- [x] Member application form with membership tiers and leadership invitation
 - [x] Vendor registration form (vendor-form.html)
 - [x] Business grant information page (grant.html)
 - [x] Contact page with contact info and social links
@@ -65,6 +65,8 @@ CoC/
 - [x] Uniform button styling on directory cards
 - [x] Card hover effects and improved contrast
 - [x] Responsive navigation (horizontal desktop menu, hamburger mobile menu)
+- [x] Membership tiers display with pricing and benefits
+- [x] Leadership invitation section on membership form
 
 ### In Progress
 - [ ] Add more member businesses to directory
@@ -82,7 +84,7 @@ CoC/
 | Home | Welcome message, hero section, Chamber Buzz news |
 | About | Mission, community impact, officer bios with photos |
 | Directory | Searchable business directory with categories |
-| Member Form | Membership application form |
+| Member Form | Membership application with tiers ($30-$80/year) and leadership invitation |
 | Vendor Form | Event vendor registration form |
 | Grants | Business grant information and availability |
 | Contact | Contact info, social media links |
@@ -126,4 +128,4 @@ CoC/
 
 ---
 
-**Last Updated:** March 5, 2026
+**Last Updated:** March 11, 2026
