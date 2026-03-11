@@ -37,7 +37,8 @@ CoC/
 ├── blog-post-1.html       # Full blog article page
 ├── directory.html         # Business directory with member cards
 ├── member-form.html       # Membership application form
-├── vendor-form.html       # Event vendor registration form
+├── vendor.html            # Event vendor registration form
+├── vendor-form.html       # Legacy vendor form (redirects to vendor.html)
 ├── grant.html             # Business grant information
 ├── contact.html           # Contact information and form
 └── README.md              # This file
@@ -54,7 +55,7 @@ CoC/
 - [x] Business directory with 13 member businesses
 - [x] Directory search and category filtering
 - [x] Member application form with membership tiers and leadership invitation
-- [x] Vendor registration form (vendor-form.html)
+- [x] Vendor registration form with booth options and waiver
 - [x] Business grant information page (grant.html)
 - [x] Contact page with contact info and social links
 - [x] CSS styling with dark theme and responsive design
@@ -85,7 +86,7 @@ CoC/
 | About | Mission, community impact, officer bios with photos |
 | Directory | Searchable business directory with categories |
 | Member Form | Membership application with tiers ($30-$80/year) and leadership invitation |
-| Vendor Form | Event vendor registration form |
+| Vendor Form | Event vendor registration with booth options ($0-$50) |
 | Grants | Business grant information and availability |
 | Contact | Contact info, social media links |
 | Blog Post | Full article view with images |

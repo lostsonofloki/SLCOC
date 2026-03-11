@@ -973,7 +973,97 @@ ul {
 }
 
 /* =========================
-   16. MEMBERSHIP TIERS SECTION
+   16. VENDOR REGISTRATION PAGE
+========================== */
+.vendor-notice {
+    padding: 3rem 0;
+    background-color: var(--bg-light);
+}
+
+.notice-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-white);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.notice-content h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.notice-content p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.notice-content address {
+    background-color: var(--bg-dark);
+    padding: 1rem;
+    border-radius: 4px;
+    font-style: normal;
+    color: var(--text-light);
+}
+
+.notice-content address strong {
+    color: var(--secondary-color);
+}
+
+.vendor-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-notice {
+    background-color: var(--bg-dark);
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--primary-color);
+    margin: 1.5rem 0;
+}
+
+.form-notice p {
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.form-notice strong {
+    color: var(--secondary-color);
+}
+
+.checkbox-group {
+    margin-top: 1.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    min-width: 20px;
+    height: 20px;
+    margin-top: 0.2rem;
+    cursor: pointer;
+    accent-color: var(--secondary-color);
+}
+
+.checkbox-label span {
+    line-height: 1.5;
+}
+
+/* =========================
+   17. MEMBERSHIP TIERS SECTION
 ========================== */
 .membership-tiers {
     padding: 4rem 0;
@@ -1142,6 +1232,18 @@ ul {
     .signatures {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .vendor-notice {
+        padding: 2rem 0;
+    }
+
+    .notice-content {
+        padding: 1.5rem;
+    }
+
+    .vendor-form .form-row {
+        grid-template-columns: 1fr;
     }
 
     .membership-tiers h2 {
