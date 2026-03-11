@@ -131,8 +131,9 @@
 
         <section class="form-section">
             <div class="section-wrapper">
-                <form action="https://formspree.io/f/mreyqrwr" method="POST" class="standard-form">
+                <form action="https://formspree.io/f/mreyqrwr" method="POST" class="standard-form" novalidate>
                     <input type="hidden" name="_subject" value="New Membership Application: South Lamar Chamber">
+                    <input type="hidden" name="_cc" value="southlamarchamber@gmail.com">
                     <div class="form-group">
                         <label for="bizName">Business/Name *</label>
                         <input type="text" id="bizName" name="bizName" required>
@@ -143,7 +144,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="_replyto" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number *</label>
