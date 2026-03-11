@@ -981,9 +981,9 @@ ul {
 }
 
 .notice-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.5rem;
     background-color: var(--bg-white);
     border-left: 4px solid var(--secondary-color);
     border-radius: 8px;
@@ -999,18 +999,94 @@ ul {
 .notice-content p {
     color: var(--text-light);
     margin-bottom: 1rem;
+    line-height: 1.7;
 }
 
-.notice-content address {
+.notice-content a {
+    color: var(--secondary-color);
+}
+
+.notice-content a:hover {
+    text-decoration: underline;
+}
+
+.event-address {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notice-box {
     background-color: var(--bg-dark);
-    padding: 1rem;
+    padding: 1.25rem;
     border-radius: 4px;
-    font-style: normal;
+    margin: 1.5rem 0;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.notice-box h3 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.notice-box p {
+    margin-bottom: 0;
+}
+
+.mlm-notice {
+    border-left-color: var(--primary-color);
+    background-color: rgba(163, 32, 32, 0.1);
+}
+
+.mlm-notice p {
     color: var(--text-light);
 }
 
-.notice-content address strong {
+.mailing-info {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--bg-dark);
+    border-radius: 4px;
+}
+
+.mailing-info p {
+    margin-bottom: 1rem;
+}
+
+.mailing-info address {
+    font-style: normal;
+    color: var(--text-light);
+    padding-left: 1rem;
+    border-left: 2px solid var(--secondary-color);
+}
+
+.mailing-info address strong {
     color: var(--secondary-color);
+}
+
+.important-info {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    background-color: rgba(220, 167, 58, 0.1);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+.important-info p {
+    margin-bottom: 0.75rem;
+}
+
+.important-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.05rem;
 }
 
 .vendor-form .form-row {
@@ -1240,6 +1316,22 @@ ul {
 
     .notice-content {
         padding: 1.5rem;
+    }
+
+    .notice-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .notice-box {
+        padding: 1rem;
+    }
+
+    .mailing-info {
+        padding: 1rem;
+    }
+
+    .important-info {
+        padding: 1rem;
     }
 
     .vendor-form .form-row {
