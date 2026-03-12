@@ -70,6 +70,7 @@ CoC/
 - [x] Membership tiers display with pricing and benefits
 - [x] Leadership invitation section on membership form
 - [x] Payment success page with Stripe buy button integration
+- [x] Thanks page with professional payment portal (Stripe + check options)
 
 ### In Progress
 - [ ] Add more member businesses to directory
@@ -93,6 +94,7 @@ CoC/
 | Contact | Contact info, social media links |
 | Blog Post | Full article view with images |
 | Payment Success | Payment confirmation with Stripe buy button |
+| Thanks | Submission confirmation with payment portal (Stripe + check) |
 
 ## Directory Members
 
