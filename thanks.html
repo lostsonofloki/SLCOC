@@ -17,14 +17,14 @@
         }
 
         .payment-portal-container {
-            max-width: 1000px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         .portal-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .portal-header h1 {
@@ -39,75 +39,75 @@
             opacity: 0.9;
         }
 
-        /* Payment Cards Grid */
-        .payment-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .payment-card {
+        /* Payment Selector Section */
+        .payment-selector {
             background-color: var(--bg-white);
-            border: 2px solid rgba(212, 175, 55, 0.3);
+            border: 2px solid var(--secondary-color);
             border-radius: 8px;
             padding: 2rem;
+            margin-bottom: 2rem;
             text-align: center;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
         }
 
-        .payment-card:hover {
-            border-color: var(--secondary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .payment-card h3 {
+        .payment-selector label {
+            display: block;
             color: var(--secondary-color);
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .payment-card .price {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--text-light);
-            margin: 1rem 0;
-        }
-
-        .payment-card .price span {
-            font-size: 1.5rem;
-            vertical-align: super;
-        }
-
-        .payment-card .stripe-button {
-            background-color: #635bff;
-            color: #ffffff !important;
-            padding: 14px 24px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            text-decoration: none;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .payment-selector select {
+            width: 100%;
+            max-width: 400px;
+            padding: 1rem 1.25rem;
+            border: 2px solid rgba(212, 175, 55, 0.5);
             border-radius: 5px;
-            display: inline-block;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-            border: none;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-size: 1rem;
+            font-family: var(--font-main);
             cursor: pointer;
-            margin-top: auto;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s ease;
         }
 
-        .payment-card .stripe-button:hover {
-            background-color: #7a73ff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(50, 50, 93, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+        .payment-selector select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
         }
 
-        .payment-card .stripe-button:active {
-            background-color: #5548d9;
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+        .payment-selector select option {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .payment-selector .proceed-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            padding: 1rem 3rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid var(--secondary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .payment-selector .proceed-button:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+        }
+
+        .payment-selector .proceed-button:active {
+            transform: scale(0.98);
         }
 
         /* Festival Guidelines Box */
@@ -157,6 +157,27 @@
             font-size: 1.2rem;
         }
 
+        /* MLM Note */
+        .mlm-note {
+            background-color: var(--bg-dark);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .mlm-note p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .mlm-note a {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
         /* Home Button */
         .home-link-container {
             text-align: center;
@@ -175,17 +196,19 @@
                 font-size: 1rem;
             }
 
-            .payment-cards-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .payment-card {
+            .payment-selector {
                 padding: 1.5rem;
             }
 
-            .payment-card .price {
-                font-size: 2.5rem;
+            .payment-selector select {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .payment-selector .proceed-button {
+                width: 100%;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
             }
 
             .guidelines-box {
@@ -233,38 +256,21 @@
                 <p>Select your payment option below to finalize your registration</p>
             </div>
 
-            <!-- Payment Cards Grid -->
-            <div class="payment-cards-grid">
-                <!-- Card 1: Chamber Membership -->
-                <div class="payment-card">
-                    <h3>Chamber Membership</h3>
-                    <p style="color: var(--text-light); opacity: 0.8; font-size: 0.9rem;">Individual Annual Dues</p>
-                    <div class="price"><span>$</span>40</div>
-                    <p style="color: var(--text-light); opacity: 0.7; font-size: 0.85rem; margin-top: 1rem;">Supports local events, town beautification, and business networking</p>
-                    <a href="https://buy.stripe.com/test_00w14n6uJgMs7sKg9P0Ba00" class="stripe-button">
-                        Pay Now
-                    </a>
-                </div>
+            <!-- Payment Selector -->
+            <div class="payment-selector">
+                <label for="paymentType">Select Your Payment Type:</label>
+                <select id="paymentType">
+                    <option value="">-- Choose an option --</option>
+                    <option value="https://buy.stripe.com/test_00w14n6uJgMs7sKg9P0Ba00">Annual Business Membership - $80</option>
+                    <option value="https://buy.stripe.com/test_fZu14ncT7ao4aEW7Dj0Ba01">Standard Vendor Booth (12x12) - $30</option>
+                    <option value="https://buy.stripe.com/test_dRm14n06l9k08wOcXD0Ba02">Food Vendor Day Pass - $50</option>
+                </select>
+                <button class="proceed-button" onclick="proceedToPayment()">Proceed to Payment</button>
+            </div>
 
-                <!-- Card 2: Standard Vendor -->
-                <div class="payment-card">
-                    <h3>12x12 Booth Spot</h3>
-                    <p style="color: var(--text-light); opacity: 0.8; font-size: 0.9rem;">Standard Vendor</p>
-                    <div class="price"><span>$</span>30</div>
-                    <a href="https://buy.stripe.com/test_fZu14ncT7ao4aEW7Dj0Ba01" class="stripe-button">
-                        Pay Now
-                    </a>
-                </div>
-
-                <!-- Card 3: Food Vendor -->
-                <div class="payment-card">
-                    <h3>Food Vendor Day Pass</h3>
-                    <p style="color: var(--text-light); opacity: 0.8; font-size: 0.9rem;">Food Vendor</p>
-                    <div class="price"><span>$</span>50</div>
-                    <a href="https://buy.stripe.com/test_dRm14n06l9k08wOcXD0Ba02" class="stripe-button">
-                        Pay Now
-                    </a>
-                </div>
+            <!-- MLM Note -->
+            <div class="mlm-note">
+                <p><strong>Note for MLM Vendors:</strong> If you are selling products for Scentsy, Avon, or similar multi-level marketing companies, please <a href="mailto:southlamarchamber@gmail.com">email us</a> for approval before completing your payment.</p>
             </div>
 
             <!-- Festival Guidelines Box -->
@@ -304,6 +310,17 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        function proceedToPayment() {
+            var select = document.getElementById('paymentType');
+            var selectedValue = select.value;
+            
+            if (selectedValue) {
+                window.open(selectedValue, '_blank');
+            } else {
+                alert('Please select a payment option before proceeding.');
+            }
+        }
+    </script>
 </body>
 </html>
