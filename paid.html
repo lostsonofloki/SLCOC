@@ -126,6 +126,32 @@
             color: var(--secondary-color);
         }
 
+        /* Stripe Buy Button Styles */
+        .stripe-buy-button {
+            display: inline-block;
+            background-color: #635bff;
+            color: #ffffff;
+            padding: 0.875rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            box-shadow: 0 1px 3px rgba(50, 50, 93, 0.1);
+        }
+
+        .stripe-buy-button:hover {
+            background-color: #5851df;
+            box-shadow: 0 2px 5px rgba(50, 50, 93, 0.2);
+        }
+
+        .stripe-buy-button:active {
+            transform: scale(0.97);
+            box-shadow: 0 1px 2px rgba(50, 50, 93, 0.1);
+        }
+
         @media (max-width: 768px) {
             .payment-success-main {
                 padding: 2rem 0;
@@ -147,6 +173,12 @@
             .checkmark-icon svg {
                 width: 45px;
                 height: 45px;
+            }
+
+            .stripe-buy-button {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 1.5rem;
             }
         }
     </style>
@@ -184,18 +216,18 @@
                         </svg>
                     </div>
 
-                    <h1>Payment Successful!</h1>
-                    <p class="subtitle">Thank you for your investment in South Lamar. Your membership is now active.</p>
+                    <h1>You're All Set!</h1>
+                    <p class="subtitle">Thank you for supporting the South Lamar Chamber of Commerce. Your payment has been received, and your spot is officially secured.</p>
 
                     <div class="next-steps-section">
                         <h3>Next Steps</h3>
                         <ul>
-                            <li>You will receive an email receipt shortly.</li>
-                            <li>A welcome packet from the Chamber will be sent to you soon.</li>
+                            <li>Check your inbox for a confirmation receipt from Stripe.</li>
+                            <li>Christina or a member of our board will be in touch with you shortly with all the details you need.</li>
                         </ul>
                     </div>
 
-                    <a href="index.html" class="home-button">Return to Home</a>
+                    <a href="index.html" class="home-button">Back to the Chamber Site</a>
                 </div>
             </div>
         </section>
