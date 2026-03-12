@@ -3,53 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | South Lamar Chamber</title>
-    <meta name="description" content="Thank you for your submission to the South Lamar Chamber of Commerce.">
+    <title>Complete Your Registration | South Lamar Chamber</title>
+    <meta name="description" content="Select your payment option to complete your registration with the South Lamar Chamber of Commerce.">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Payment Portal Section */
-        .payment-portal {
-            margin: 2rem 0;
-            padding: 1.5rem;
-            border: 2px solid var(--secondary-color);
-            border-radius: 8px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 100%);
+        .payment-portal-page {
+            background-color: var(--bg-dark);
+            min-height: 80vh;
+        }
+
+        .payment-portal-main {
+            padding: 3rem 0;
+        }
+
+        .payment-portal-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .portal-header {
             text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .payment-portal h3 {
+        .portal-header h1 {
             color: var(--secondary-color);
-            font-size: 1.3rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .payment-portal .recommended-badge {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--text-dark);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-        }
-
-        .payment-portal p {
+        .portal-header p {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
             opacity: 0.9;
         }
 
-        .stripe-pay-button {
+        /* Payment Cards Grid */
+        .payment-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .payment-card {
+            background-color: var(--bg-white);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .payment-card:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .payment-card h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-card .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin: 1rem 0;
+        }
+
+        .payment-card .price span {
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+
+        .payment-card .stripe-button {
             background-color: #635bff;
             color: #ffffff !important;
-            padding: 14px 28px;
-            font-size: 1.05rem;
+            padding: 14px 24px;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
             border-radius: 5px;
@@ -58,88 +95,115 @@
             box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
             border: none;
             cursor: pointer;
+            margin-top: auto;
         }
 
-        .stripe-pay-button:hover {
+        .payment-card .stripe-button:hover {
             background-color: #7a73ff;
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(50, 50, 93, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .stripe-pay-button:active {
+        .payment-card .stripe-button:active {
             background-color: #5548d9;
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
         }
 
-        .payment-divider {
-            display: flex;
-            align-items: center;
-            margin: 1.5rem 0;
-            color: var(--text-light);
-            opacity: 0.7;
-            font-size: 0.85rem;
+        /* Festival Guidelines Box */
+        .guidelines-box {
+            background-color: var(--bg-white);
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .payment-divider::before,
-        .payment-divider::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .payment-divider span {
-            padding: 0 1rem;
-        }
-
-        .check-payment-info {
-            text-align: left;
-            padding: 1rem;
-            background-color: var(--bg-dark);
-            border-radius: 4px;
-        }
-
-        .check-payment-info p {
-            margin-bottom: 0.75rem;
-            font-size: 0.9rem;
-        }
-
-        .check-payment-info address {
-            font-style: normal;
-            color: var(--text-light);
-            padding-left: 1rem;
-            border-left: 2px solid var(--secondary-color);
-            font-size: 0.9rem;
-        }
-
-        .check-payment-info address strong {
+        .guidelines-box h3 {
             color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .guidelines-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .guidelines-box li {
+            color: var(--text-light);
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .guidelines-box li:last-child {
+            border-bottom: none;
+        }
+
+        .guidelines-box li::before {
+            content: "!";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Home Button */
+        .home-link-container {
+            text-align: center;
         }
 
         @media (max-width: 768px) {
-            .payment-portal {
-                padding: 1.25rem;
+            .payment-portal-main {
+                padding: 2rem 0;
             }
 
-            .payment-portal h3 {
-                font-size: 1.1rem;
+            .portal-header h1 {
+                font-size: 1.8rem;
             }
 
-            .stripe-pay-button {
-                width: 100%;
-                text-align: center;
-                padding: 16px 24px;
+            .portal-header p {
                 font-size: 1rem;
             }
 
-            .payment-divider {
-                font-size: 0.8rem;
+            .payment-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .payment-card {
+                padding: 1.5rem;
+            }
+
+            .payment-card .price {
+                font-size: 2.5rem;
+            }
+
+            .guidelines-box {
+                padding: 1.5rem;
+            }
+
+            .guidelines-box h3 {
+                font-size: 1.1rem;
+            }
+
+            .guidelines-box li {
+                font-size: 0.9rem;
+                padding-left: 1.5rem;
             }
         }
     </style>
 </head>
-<body class="thanks-page">
+<body class="payment-portal-page">
 
     <header class="site-header">
         <div class="logo">
@@ -162,39 +226,61 @@
         </nav>
     </header>
 
-    <main class="thanks-main">
-        <section class="content-container">
-            <div class="thanks-content">
-                <div class="success-icon">&#10004;</div>
-                <h1>Submission Received!</h1>
-                <p>Thank you for reaching out to the South Lamar County Chamber of Commerce. Someone from our team will be in touch with you shortly.</p>
+    <main class="payment-portal-main">
+        <div class="payment-portal-container">
+            <div class="portal-header">
+                <h1>Complete Your Registration</h1>
+                <p>Select your payment option below to finalize your registration</p>
+            </div>
 
-                <!-- Payment Portal Section -->
-                <div class="payment-portal">
-                    <span class="recommended-badge">Recommended</span>
-                    <h3>Complete Your Membership</h3>
-                    <p>Pay your dues securely online with Stripe. Accepts all major cards and Apple Pay.</p>
-                    <a href="https://buy.stripe.com/test_00w14n6uJgMs7sKg9P0Ba00" class="stripe-pay-button">
-                        Pay Dues Online
+            <!-- Payment Cards Grid -->
+            <div class="payment-cards-grid">
+                <!-- Card 1: Chamber Membership -->
+                <div class="payment-card">
+                    <h3>Chamber Membership</h3>
+                    <p style="color: var(--text-light); opacity: 0.8; font-size: 0.9rem;">Annual Membership</p>
+                    <div class="price"><span>$</span>80</div>
+                    <a href="https://buy.stripe.com/test_00w14n6uJgMs7sKg9P0Ba00" class="stripe-button">
+                        Pay Now
                     </a>
-
-                    <div class="payment-divider">
-                        <span>OR PAY BY CHECK</span>
-                    </div>
-
-                    <div class="check-payment-info">
-                        <p><strong>Mail your check to:</strong></p>
-                        <address>
-                            <strong>South Lamar Chamber of Commerce</strong><br>
-                            P.O. Box 205<br>
-                            Millport, AL 35576
-                        </address>
-                    </div>
                 </div>
 
-                <a href="index.html" class="btn-gold">Return Home</a>
+                <!-- Card 2: Standard Vendor -->
+                <div class="payment-card">
+                    <h3>12x12 Booth Spot</h3>
+                    <p style="color: var(--text-light); opacity: 0.8; font-size: 0.9rem;">Standard Vendor</p>
+                    <div class="price"><span>$</span>30</div>
+                    <a href="https://buy.stripe.com/test_fZu14ncT7ao4aEW7Dj0Ba01" class="stripe-button">
+                        Pay Now
+                    </a>
+                </div>
+
+                <!-- Card 3: Food Vendor -->
+                <div class="payment-card">
+                    <h3>Food Vendor Day Pass</h3>
+                    <p style="color: var(--text-light); opacity: 0.8; font-size: 0.9rem;">Food Vendor</p>
+                    <div class="price"><span>$</span>50</div>
+                    <a href="https://buy.stripe.com/test_dRm14n06l9k08wOcXD0Ba02" class="stripe-button">
+                        Pay Now
+                    </a>
+                </div>
             </div>
-        </section>
+
+            <!-- Festival Guidelines Box -->
+            <div class="guidelines-box">
+                <h3>Festival Guidelines</h3>
+                <ul>
+                    <li>Forms submitted after 10/15 include a $10 late fee.</li>
+                    <li>No refunds once payment is received.</li>
+                    <li>MLMs (Scentsy, Avon, etc.) must be approved via email before paying.</li>
+                </ul>
+            </div>
+
+            <!-- Return Home Link -->
+            <div class="home-link-container">
+                <a href="index.html" class="btn-gold">Return to Home</a>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
