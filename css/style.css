@@ -903,7 +903,117 @@ ul {
 }
 
 /* =========================
-   15. MEMBERSHIP INVITE SECTION
+   15. THANK YOU PAGE
+========================== */
+.thanks-page {
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+}
+
+.thanks-main {
+    padding: 4rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.thanks-content {
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.thanks-content h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.thanks-content p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.next-steps {
+    background-color: var(--bg-dark);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.next-steps p {
+    margin-bottom: 1rem;
+}
+
+.next-steps address {
+    font-style: normal;
+    color: var(--text-light);
+    padding-left: 1rem;
+    border-left: 2px solid var(--secondary-color);
+}
+
+.next-steps address strong {
+    color: var(--secondary-color);
+}
+
+.btn-gold {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 0.875rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-gold:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .thanks-main {
+        padding: 2rem 0;
+    }
+
+    .thanks-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .thanks-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .success-icon {
+        font-size: 3rem;
+    }
+}
+
+/* =========================
+   16. VENDOR REGISTRATION PAGE
 ========================== */
 .membership-invite {
     padding: 4rem 0;

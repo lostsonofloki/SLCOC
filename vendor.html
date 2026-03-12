@@ -79,7 +79,7 @@
 
         <section class="form-section">
             <div class="section-wrapper">
-                <form action="https://formspree.io/f/mreyqrwr" method="POST" class="standard-form vendor-form">
+                <form id="vendorForm" class="standard-form vendor-form">
                     <input type="hidden" name="_subject" value="New Vendor Registration: South Lamar Chamber">
                     <div class="form-row">
                         <div class="form-group">
@@ -174,5 +174,42 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('vendorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            fetch('https://formspree.io/f/mreyqrwr', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = 'thanks.html';
+                } else {
+                    response.json().then(data => {
+                        alert('Error: ' + (data.errors ? data.errors.map(e => e.message).join(', ') : 'Submission failed. Please try again.'));
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
 </body>
 </html>
